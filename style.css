@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    padding: 12px;
+}
+
+body {
+    background: url('626384315253.png') no-repeat center/contain content-box;
+    margin: 0px;
+}
