@@ -2,7 +2,7 @@ window.addEventListener('load', function () {
     var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
     var source = audioCtx.createBufferSource();
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', '626384315253.mp3');
+    xhr.open('GET', './626384315253.mp3');
     xhr.responseType = 'arraybuffer';
     xhr.addEventListener('load', function (r) {
         audioCtx.decodeAudioData(
@@ -15,4 +15,8 @@ window.addEventListener('load', function () {
         source.start(0);
     });
     xhr.send();
+
+    document.addEventListener('click', function() {
+      audioCtx.resume();
+    });
 });
